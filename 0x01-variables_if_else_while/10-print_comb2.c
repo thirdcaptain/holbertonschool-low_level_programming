@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - 0, 1, ... 8, 9 using putchar and no var type char
+ * main - 00, 01, ... 98, 99 using putchar and no var type char
  *
  * Return: Always 0 (Success)
  */
