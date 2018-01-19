@@ -3,10 +3,11 @@
 #include <stdio.h>
 
 /**
- *main - prints information about the last digit of a randomly generated number
+ * main - Prints info about the last digit of a random number
  *
- *Return 0: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int n;
@@ -17,7 +18,7 @@ int main(void)
 		printf(
 "Last digit of %d is %d and is less than 6 and not 0\n", n, abs(n % 10));
 	else if (abs(n % 10) > 5 && !abs(n % 10) == 0)
-		 printf(
+		printf(
 "Last digit of %d is %d and is greater than 5\n", n, abs(n % 10));
 	else
 		printf("Last digit of %d is %d and is 0\n", n, abs(n % 10));
