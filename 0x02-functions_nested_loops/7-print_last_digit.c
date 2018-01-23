@@ -2,7 +2,6 @@
 
 /**
  *print_last_digit - print and return last digit.
- *
  *@a: The value to be evaluated.
  *
  *Return: Last digit.
