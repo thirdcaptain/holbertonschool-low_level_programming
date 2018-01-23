@@ -4,7 +4,7 @@
  * print_last_digit - returns last value of a digit.
  * @a: The value to be evaluated.
  *
- * Return: 0 Always successful.
+ * Return: Last digit.
  */
 
 int print_last_digit(int a)
