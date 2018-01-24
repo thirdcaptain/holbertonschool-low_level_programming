@@ -1,8 +1,9 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
- * times_table - print times table to 9.
+ *times_table - print 9 times table
  */
+
 void times_table(void)
 {
 	int a;
@@ -18,40 +19,22 @@ void times_table(void)
 			output = a * b;
 			first = (output / 10) % 10;
 			second = output % 10;
-			if (b == 0)
+			if (!(first == 0))
 			{
-				_putchar('0');
-			}
-			else if (b < 9 && b > 0)
-			{
-				_putchar(',');
-				_putchar(' ');
-				if (first == 0)
+				if (1)
 				{
+					_putchar(',');
 					_putchar(' ');
-					_putchar(second + '0');
-				}
-				if (first != 0)
-				{
+					_putchar(' ');
 					_putchar(first + '0');
 					_putchar(second + '0');
 				}
-			}
-			else if (b == 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-				if (first == 0)
+				else
 				{
+					_putchar(',');
 					_putchar(' ');
-					_putchar(second + '0');
-					_putchar('\n');
-				}
-				if (first != 0)
-				{
 					_putchar(first + '0');
 					_putchar(second + '0');
-					_putchar('\n');
 				}
 			}
 		}
