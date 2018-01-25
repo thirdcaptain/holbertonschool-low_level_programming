@@ -1,9 +1,10 @@
+#include "holberton.h"
 #include <stdio.h>
 
 /**
  * main - print natural numbers below 1024
  *
- *Return: 0 Always success.
+ * Return: 0 Always success.
  */
 int main(void)
 {
@@ -12,9 +13,7 @@ int main(void)
 
 	for (a = 0; a < 1024; a++)
 	{
-		if (a % 3 == 0)
-			sum = sum + a;
-		if (a % 5 == 0)
+		if ((a % 3) || (a % 5) == 0)
 			sum = sum + a;
 	}
 	printf("%d\n", sum);
