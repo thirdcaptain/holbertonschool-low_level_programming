@@ -2,6 +2,8 @@
 
 /**
  * main - print natural numbers below 1024
+ *
+ *Return: 0 Always success.
  */
 
 int main(void)
