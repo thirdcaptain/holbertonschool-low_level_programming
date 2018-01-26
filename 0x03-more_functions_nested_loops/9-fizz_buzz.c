@@ -6,9 +6,10 @@
  *
  * Description:  Substitutes Fizz if div by 3, Buzz, if div by 5
  * FizzBuzz if divisible by both
+ * Return: 0 Always success
  */
 
-int main (void)
+int main(void)
 {
 	int i;
 
@@ -20,7 +21,7 @@ int main (void)
 			printf("Buzz ");
 		else if ((i % 5 == 0) && (i % 3 == 0))
 			printf("FizzBuzz ");
-		    else
+		else
 			    printf("%d ", i);
 	}
 	printf("\n");
