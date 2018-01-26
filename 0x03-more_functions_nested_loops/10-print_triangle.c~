@@ -1,0 +1,11 @@
+#include "holberton.h"
+
+/**
+ *print_triangle - prints triangle of size, size.
+ *@size: Size of the triangle
+ */
+
+void print_triangle(int size)
+{
+	for
+}
