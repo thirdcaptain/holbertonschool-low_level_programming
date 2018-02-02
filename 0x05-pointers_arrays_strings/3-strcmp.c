@@ -25,5 +25,5 @@ int _strcmp(char *s1, char *s2)
 		s2_size += s2[j];
 		j++;
 	}
-	return (s1 - s2);
+	return (s1_size - s2_size);
 }
