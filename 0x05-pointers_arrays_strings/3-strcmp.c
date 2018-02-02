@@ -10,20 +10,13 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int s1_size = 0;
-	int s2_size = 0;
+	int cmp = 0;
 	int i = 0;
-	int j = 0;
 
 	while (s1[i])
 	{
-		s1_size += s1[i];
+		cmp += s1[i] - s2[i];
 		i++;
 	}
-	while (s2[j])
-	{
-		s2_size += s2[j];
-		j++;
-	}
-	return (s1_size - s2_size);
+	return (cmp);
 }
