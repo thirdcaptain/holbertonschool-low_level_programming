@@ -3,18 +3,18 @@
 /**
  * calc_prime - calculates if a number is prime
  * @i: number to calculate prime
- * @n: Number to determine if prime
+ * @num: Number to determine if prime
  *
  * Return: 1 if n is prime, 0 otherwise.
  */
 
 int calc_prime(int i, int num)
 {
-	if (i < 2)
+	if (i == 2)
 		return (1);
 	if (num % i == 0)
 		return (0);
-	return (calc_prime((i - 1), num));
+	return (calc_prime(i - 1, num));
 }
 
 /**
@@ -26,9 +26,11 @@ int calc_prime(int i, int num)
 
 int is_prime_number(int n)
 {
-	int calc = n - 1;
+	int number = n - 1;
 
-	if (n <= 1)
+	if (n == 2)
+		return (1);
+	if (n < 2)
 		return (0);
-	return (calc_prime(calc, n));
+	return (calc_prime(number, n));
 }
