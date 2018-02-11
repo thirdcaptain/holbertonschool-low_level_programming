@@ -1,4 +1,4 @@
-# 0x07. C - Static libraries
+# 0x08. C - Static libraries
 
 20180211
 The purpose of this project is to introduce the use of static libraries
