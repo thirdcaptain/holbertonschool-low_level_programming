@@ -22,27 +22,27 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	while (value > 25)
+	while (value >= 25)
 	{
 		value = value - 25;
 		coin_count++;
 	}
-	while (value > 10)
+	while (value >= 10)
 	{
 		value = value - 10;
 		coin_count++;
 	}
-	while (value > 5)
+	while (value >= 5)
 	{
 		value = value - 5;
 		coin_count++;
 	}
-	while (value > 2)
+	while (value >= 2)
 	{
 		value = value - 2;
 		coin_count++;
 	}
-	while (value > 1)
+	while (value >= 1)
 	{
 		value = value - 1;
 		coin_count++;
