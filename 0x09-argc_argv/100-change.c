@@ -18,7 +18,10 @@ int main(int argc, char *argv[])
 	}
 	value = atoi(argv[1]);
 	if (value <= 0)/*there was ; here, madison found it!*/
+	{
+		printf("0\n");
 		return (0);
+	}
 	while (value > 25)
 	{
 		value = value - 25;
