@@ -11,9 +11,9 @@
 
 char *_strdup(char *str)
 {
-	unsigned int str_length = 0;
+	int str_length = 0;
 	char *dup_string;
-	unsigned int i;
+	int i;
 
 	if (str == NULL)
 		return (NULL);
@@ -21,13 +21,12 @@ char *_strdup(char *str)
 	{
 		str_length++;
 	}
-	dup_string = malloc(str_length * (sizeof(char)));
+	dup_string = malloc(str_length * (sizeof(char)) + 1);
 	if (dup_string == NULL)
 		return (NULL);
 	for (i = 0; i < str_length; i++)
 	{
 		dup_string[i] = str[i];
 	}
-	dup_string[str_length + 1] = '\0';
 	return (dup_string);
 }
