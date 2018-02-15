@@ -13,9 +13,8 @@
 char *argstostr(int ac, char **av)
 {
 	char *string;
-	char *new;
 	int length;
-	int i, j;
+	int i, j, k = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -27,17 +26,16 @@ char *argstostr(int ac, char **av)
 	string = malloc(sizeof(char) * (length + ac + 1));
 	if (string == NULL)
 		return (NULL);
-	new = string; /*copies beginning of string pointer*/
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			*new = av[i][j];
-			new++;
+			string[k] = av[i][j];
+			k++;
 		}
-		*new = '\n';
-		new++;
+		string[k] = '\n';
+		k++;
 	}
-	*new = '\0';
+	string[k] = '\0';
 	return (string);
 }
