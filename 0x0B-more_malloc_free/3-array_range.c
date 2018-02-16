@@ -15,20 +15,20 @@ int *array_range(int min, int max)
 	int length;
 	int *int_array;
 	int i;
+	int k = 0;
 
 	if (min > max)
 		return (NULL);
 
-	length = max - min;
-	length++;
-	int_array = malloc((sizeof(int) * length) + 1);
+	length = (max - min) + 1;
+	int_array = malloc(sizeof(int) * length);
 	if (int_array == NULL)
 		return (NULL);
-	for (i = 0; i <= length; i++)
+
+	for (i = min; i <= max; i++)
 	{
-		int_array[i] = min;
-		min++;
+		int_array[k] = i;
+		k++;
 	}
-	int_array[i] = '\0';
 	return (int_array);
 }
