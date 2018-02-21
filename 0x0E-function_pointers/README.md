@@ -1,9 +1,9 @@
-# 0x0D. C - Structures, typedef
+# 0x0E. Function Pointers
 
-20180219
-The purpose of this project is to introduce the use of structures and typedef
+20180221
+The purpose of this project is to introduce the use of function pointers
 
-### dog.h
+### 0-pr
 Define struct dog with name, age, and owner elements
 
 ### 
