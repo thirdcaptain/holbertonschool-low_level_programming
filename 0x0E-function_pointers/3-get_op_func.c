@@ -1,5 +1,14 @@
 #include "3-calc.h"
 
+/**
+ * get_op_func - gets operational function and returns result
+ * @s: operator string
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: evaluation from operation function
+ */
+
 int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
