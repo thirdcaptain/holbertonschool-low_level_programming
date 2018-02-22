@@ -3,14 +3,14 @@
 20180221
 The purpose of this project is to introduce the use of function pointers
 
-### 0-pr
-Define struct dog with name, age, and owner elements
+### 0-print_name.c
+prints a name
 
-### 
-concatenates two strings
+### 1-array_iterator.c
+executes a function given as a parameter on each element of an array
 
-### 
-allocates memory for an array, using malloc
+### 2-int_index.c
+searches for an integer
 
 ### 
 creates an array of integers
