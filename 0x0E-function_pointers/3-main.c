@@ -38,6 +38,6 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	result = (get_op_func(operator)(a, b));
-	printf("result: %d\n", result);
+	printf("%d\n", result);
 	return (0);
 }
