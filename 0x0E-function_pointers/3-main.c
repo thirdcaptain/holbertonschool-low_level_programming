@@ -12,8 +12,6 @@ int main(int argc, char *argv[])
 {
 	int a;
 	int b;
-	int i;
-	int str_len;
 	char *operator;
 	int result;
 
@@ -21,16 +19,14 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	operator = argv[2];
 
-	for (i = 0; operator[i] != '\0'; i++)
-		str_len++;
-
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (*operator != '+' && *operator != '-' &&
+	if ((*operator != '+' && *operator != '-' &&
 	    *operator != '*' && *operator != '/' && *operator != '%')
+	    || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
