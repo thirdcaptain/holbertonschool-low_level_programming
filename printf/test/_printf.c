@@ -11,17 +11,36 @@
 int _printf(const char *format, ...)
 {
 	int i;
+	unsigned int p_char;
+	char *p_string;
 	va_list ap;
-	char *string;
+	const char *string;
 
 	va_start(ap, format);
 
 	string = format;
-	while (format[i] != '\0')
+	i = 0;
+	while (string[i] != '\0')
 	{
-		_putchar(string[i]);
-	}
+		while (string[i] != '%' && string[i] != '\0')
+		{
+			_putchar(string[i]);
+			i++;
+		}
+		i++;
+/*	
+		switch(string[i])
+		{
+			case 'c' : p_char = va_arg(ap, int);
+				   _putchar(p_char);
+				   break;
+			case 's' : p_string = va_arg(ap, char *);
+				   _puts(p_string);
+				   break;
+		}
+*/	}
 	va_end(ap);
+	return (0);
 /*	int len;
 
 	len = _strlen(format);
