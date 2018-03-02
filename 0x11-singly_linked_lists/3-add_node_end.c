@@ -9,15 +9,15 @@
 
 unsigned int _strlen(const char *s)
 {
-        unsigned int i;
+	unsigned int i;
 
-        for (i = 0; s[i]; i++)
-        {}
-        return (i);
+	for (i = 0; s[i]; i++)
+	{}
+	return (i);
 }
 
 /**
- * add_node - adds a new node at the beginning of the list_t list
+ * add_node_end - adds a new node at the beginning of the list_t list
  * @head: start node
  * @str: data in node
  *
@@ -26,30 +26,44 @@ unsigned int _strlen(const char *s)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-        list_t *node;
+	list_t *node;
 	list_t *end_node;
-        unsigned int length;
+	unsigned int length = _strlen(str);
+
+	if (head == NULL)
+		return (NULL);
 
 /* Initialize end_node*/
-        end_node = malloc(sizeof(list_t));
-        if (end_node == NULL)
-        {
-                free(end_node);
-                return (NULL);
-        }
-        length = _strlen(str);
-        end_node->len = length;
-        end_node->str = strdup(str);
-/*	end_node->next = NULL;*/
-
-/*Move node location to end*/
-	node = *head;
-	while (node->next != NULL)
+	end_node = malloc(sizeof(list_t));
+	if (end_node == NULL)
 	{
-		node = node->next;
+		return (NULL);
 	}
+	end_node->len = length;
+	end_node->str = strdup(str);
+	if (end_node->str == NULL)
+	{
+		free(end_node);
+		return (NULL);
+	}
+	node = *head;
+/*Check head NULL*/
+	if (*head == NULL)
+	{
+		*head = end_node;
+		end_node->next = NULL;
+		return (end_node);
+	}
+	else
+	{
+/*Move node location to end*/
+		while (node->next != NULL)
+		{
+			node = node->next;
+		}
 /*Add end_node to end*/
-        node->next = end_node;
-
-        return (*head);
+		node->next = end_node;
+		end_node->next = NULL;
+	}
+	return (end_node);
 }
