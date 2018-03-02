@@ -1,4 +1,4 @@
-0x11. 0x11. C - Singly linked lists
+0x11. C - Singly linked lists
 
 20180223
 The purpose of this project is to introduce the use of singly linked lists
