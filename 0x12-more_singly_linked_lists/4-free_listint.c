@@ -7,9 +7,19 @@
 
 void free_listint(listint_t *head)
 {
-	while (head != NULL)
+	listint_t *position, *temp;
+
+	if (head == NULL)
+		return;
+
+	if (head != NULL)
 	{
-		free(head);
-		head = head->next;
+		position = head;
+		while (position != NULL)
+		{
+			temp = position->next;
+			free(position);
+			position = temp;
+		}
 	}
 }
