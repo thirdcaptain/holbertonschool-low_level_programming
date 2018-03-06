@@ -1,6 +1,27 @@
 #include "lists.h"
 
 /**
+ * list_count - get count of list
+ * @head: head of list
+ *
+ * Return: count
+ */
+
+unsigned int list_count(listint_t *head)
+{
+	unsigned int num = 0;
+
+	if (head == NULL)
+		return (num);
+	while (head != NULL)
+	{
+		num++;
+		head = head->next;
+	}
+	return (num);
+}
+
+/**
  * insert_nodeint_at_index - inserts a node at an index
  * @head: head node
  * @idx: index to insert node
@@ -9,14 +30,13 @@
  * Return: address of new node, NULL if it failed
  */
 
-
-
-
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int count = 0, i;
-	listint_t *prev, *next, *position, *node;
+	listint_t *prev, *next, *node;
+
+	if (head == NULL)
+		return (NULL);
 
 	if ((*head) == NULL && idx > 0)
 		return (NULL);
@@ -36,12 +56,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = node;
 		return (node);
 	}
-	position = *head;
-	while (position != NULL)
-	{
-		count++;
-		position = position->next;
-	}
+/*	position = *head;*/
+	count = list_count(*head);
 	if (idx > count)
 		return (NULL);
 
