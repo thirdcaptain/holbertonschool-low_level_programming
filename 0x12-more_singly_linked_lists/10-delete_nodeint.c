@@ -58,10 +58,10 @@ void free_middle(listint_t *head, unsigned int idx)
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int count, i;
+	unsigned int count = 0, i;
 	listint_t *temp;
 
-	if ((*head) == NULL || head == NULL)
+	if (head == NULL || (*head) == NULL)
 		return (-1);
 	count = list_count(*head);
 	if (index == 0 && count == 1)
@@ -77,17 +77,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		(*head) = temp;
 		return (1);
 	}
-	if (index == (count - 1))
+	if (index == count)
 	{
 		temp = *head;
 		for (i = 0; i < (index - 1); i++)
-		{
 			temp = temp->next;
-			(*head) = (*head)->next;
-		}
 		(*head) = (*head)->next;
-		free(*head);
-		temp->next = NULL;
+		free(temp);
+		temp = NULL;
 		return (1);
 	}
 	if (index < (count - 1))
