@@ -1,28 +1,6 @@
 #include "lists.h"
 
 /**
- * list_count - get count of list
- * @head: head of list
- *
- * Return: count
- */
-
-unsigned int list_count(listint_t *head)
-{
-	unsigned int num = 0;
-
-	if (head == NULL)
-		return (num);
-
-	while (head != NULL)
-	{
-		num++;
-		head = head->next;
-	}
-	return (num);
-}
-
-/**
  * insert_nodeint_at_index - inserts a node at an index
  * @head: head node
  * @idx: index to insert node
@@ -33,8 +11,8 @@ unsigned int list_count(listint_t *head)
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int count = 0, i;
-	listint_t *prev, *next, *node;
+	unsigned int i;
+	listint_t *position, *node;
 
 	if (head == NULL || (*head) == NULL)
 		return (NULL);
@@ -49,22 +27,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = node;
 		return (node);
 	}
-	count = list_count(*head);
-	if (idx > count)
-		return (NULL);
-
-	prev = *head;
-	for (i = 1; i < idx; i++)
-		prev = prev->next;
-	next = *head;
-	for (i = 1; i < (idx + 1); i++)
-		next = next->next;
-	if (idx == count)
+	position = *head;
+	for (i = 0; i < (idx - 1); i++)
 	{
-		prev->next = node;
-		node->next = NULL;
+		position = position->next;
+		if (position == NULL)
+		{
+			free(node);
+			return (node);
+		}
 	}
-	prev->next = node;
-	node->next = next;
+	node->next = position->next;
+	position->next = node;
 	return (node);
 }
