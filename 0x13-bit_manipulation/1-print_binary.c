@@ -8,33 +8,30 @@
 void print_binary(unsigned long int n)
 {
 
-	long int size;
-	unsigned long int temp;
+	unsigned long int mask;
 
-/*determine size of integer to print, type times number of bits in a byte*/
-	size = sizeof(n) * 8;
+	mask = 1;
+	mask = mask << ((sizeof(mask) * 8) - 1);
 
-	 = n;
-	while (size >= 0)
+/*hard code zero*/
+	if (n == 0)
 	{
-		if (n 
+		_putchar('0');
+		return;
 	}
-/*
-	size--;
-	while (size >= 0)
+/*set mask to first 1*/
+	while (!(mask & n))
 	{
-		temp = n >> size;
-		if (temp <= n)
-		{
-			if (temp & 1)
-			{
-				_putchar('1');
-				printf("temp: %lu ", temp);
-			}
-			else
-				_putchar('0');
-		}
-		size--;
+		mask = mask >> 1;
 	}
-*/
+/*print 1s and zeros*/
+	while (mask > 0)
+	{
+		if (mask & n)
+			_putchar('1');
+		else
+			_putchar('0');
+		mask = mask >> 1;
+	}
+
 }
