@@ -1,4 +1,4 @@
-#0x13. C - Bit manipulation
+# 0x13. C - Bit manipulation
 
 20180306
 The purpose of this project is to introduce bit manipulation in C
