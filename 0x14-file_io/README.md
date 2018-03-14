@@ -1,22 +1,16 @@
-#0x13. C - Bit manipulation
+#0x14. C - File I/O
 
-20180306
-The purpose of this project is to introduce bit manipulation in C
+20180313
+The purpose of this project is to introduce file input and output
 
-### 0-binary_to_uint.c
-converts a binary number to an unsigned int
+### 0-read_textfile.c
+reads a text file and prints it to the POSIX standard output
 
-### 1-print_binary.c
-prints the binary representation of a number
+### 1-create_file.c
+creates a file with text
 
-### 2-get_bit.c
-returns the value of a bit at a given index
+### 2-append_text_to_file.c
+appends text to the end of a file
 
-### 3-set_bit.c
-sets the value of a bit to 1 at a given index
-
-### 4-clear_bit.c
-sets the value of a bit to 0 at a given index
-
-### 5-flip_bits.c
-returns the number of bits you would need to flip to get from one number to another
+### 3-cp.c
+copies the contents of a file to another file
