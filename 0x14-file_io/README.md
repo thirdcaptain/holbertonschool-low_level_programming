@@ -1,4 +1,4 @@
-#0x14. C - File I/O
+# 0x14. C - File I/O
 
 20180313
 The purpose of this project is to introduce file input and output
