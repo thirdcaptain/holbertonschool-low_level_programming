@@ -1,10 +1,13 @@
-#0x13. C - Bit manipulation
+# 0x13. C - Bit manipulation
 
 20180306
 The purpose of this project is to introduce bit manipulation in C
 
 ### 0-binary_to_uint.c
-converts a binary number to an unsigned int
+converts a binary number to an unsigned int using bitwise operators
+
+### 0-binary_to_uint.c-old
+converts a binary number to an unsigned int without bitwise operators
 
 ### 1-print_binary.c
 prints the binary representation of a number
