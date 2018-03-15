@@ -29,7 +29,6 @@ void copy_text(int fd_src, int fd_dest, char *file1, char *file2)
 		exit(99);
 		}
 	} while (write_ret == 1024);
-
 }
 
 /**
@@ -48,7 +47,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		return (97);
+		exit(97);
 	}
 	filename1 = argv[1];
 	filename2 = argv[2];
@@ -57,26 +56,26 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO,
 			"Error: Can't read from file %s\n", argv[1]);
-		return (98);
+		exit(98);
 	}
 	fd_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		return (99);
+		exit(99);
 	}
 	copy_text(fd_from, fd_to, filename1, filename2);
 	close_from_ret = close(fd_from);
 	if (close_from_ret == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd: %d", fd_from);
-		return (100);
+		exit(100);
 	}
 	close_to_ret = close(fd_to);
 	if (close_to_ret == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd: %d", fd_to);
-		return (100);
+		exit(100);
 	}
 	return (0);
 }
