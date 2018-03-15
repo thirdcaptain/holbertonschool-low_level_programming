@@ -68,13 +68,13 @@ int main(int argc, char *argv[])
 	close_from_ret = close(fd_from);
 	if (close_from_ret == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd: %d", fd_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_from);
 		exit(100);
 	}
 	close_to_ret = close(fd_to);
 	if (close_to_ret == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd: %d", fd_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd_to);
 		exit(100);
 	}
 	return (0);
