@@ -28,7 +28,7 @@ void copy_text(int fd_src, int fd_dest, char *file1, char *file2)
 				"Error: Can't write to %s\n", file2);
 		exit(99);
 		}
-	} while (read_ret == 1024);
+	} while (write_ret == 1024);
 }
 
 /**
