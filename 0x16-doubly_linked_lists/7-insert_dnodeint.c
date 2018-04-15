@@ -12,7 +12,7 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *cursor;
-	unsigned int count;
+	unsigned int count = 0;
 	dlistint_t *new;
 	unsigned int i = 0;
 
@@ -26,10 +26,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 
 	if (idx == 0)
-		add_dnodeint(h, n);
+		return (add_dnodeint(h, n));
 
 	if (idx == count)
-		add_dnodeint_end(h, n);
+		return (add_dnodeint_end(h, n));
 
 	cursor = *h;
 	new = malloc(sizeof(dlistint_t));
