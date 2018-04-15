@@ -63,7 +63,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		count++;
 		cursor = cursor->next;
 	}
-	if (index > count)
+	if (index >= count)
 		return (-1);
 
 	if (index == 0 && count == 1)
@@ -80,7 +80,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(temp);
 		return (1);
 	}
-	if (index == count)
+	if (index == (count - 1))
 	{
 		delete_end(*head, index);
 		return (1);
