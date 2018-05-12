@@ -19,12 +19,16 @@ void hash_table_delete(hash_table_t *ht)
 			while (cursor != NULL)
 			{
 				temp = cursor->next;
+				free(cursor->key);
+				free(cursor->value);
 				free(cursor);
 				cursor = temp;
 			}
 		}
 
 	}
-	free(ht->array);
-	free(ht);
+	if (ht->array)
+		free(ht->array);
+	if (ht)
+		free(ht);
 }
