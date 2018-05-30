@@ -17,9 +17,10 @@ void selection_sort(int *array, size_t size)
 	if (array == NULL || size < 2)
 		return;
 
-	while (start < size - 1)
+	while (start < size)
 	{
 		low = array[start];
+		low_idx = start;
 		i = 0;
 		while ((start + i) < size)
 		{
