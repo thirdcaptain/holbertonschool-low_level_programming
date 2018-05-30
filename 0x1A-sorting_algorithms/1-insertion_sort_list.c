@@ -5,6 +5,7 @@
  * @position: node after node to place node
  * @node: the node to relocate
  */
+
 void swap(listint_t *position, listint_t *node)
 {
 /*	printf("position->n:%d node->%d\n", position->n, node->n); */
@@ -45,11 +46,8 @@ void swap(listint_t *position, listint_t *node)
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *cursor_f;
-	listint_t *cursor_b;
-	listint_t *temp;
-	int value = 0;
-	int count = 0;
+	listint_t *cursor_f, *cursor_b, *temp;
+	int value = 0, count = 0;
 
 	if (*list == NULL)
 		return;
@@ -78,7 +76,9 @@ void insertion_sort_list(listint_t **list)
 					swap(cursor_b, temp);
 					*list = temp;
 				}
-				swap(cursor_b, temp);
+				else
+					swap(cursor_b, temp);
+
 				print_list(*list);
 			}
 			cursor_b = cursor_b->prev;
