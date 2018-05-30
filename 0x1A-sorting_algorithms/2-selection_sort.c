@@ -14,6 +14,9 @@ void selection_sort(int *array, size_t size)
 	int low = 0;
 	int temp = 0;
 
+	if (array == NULL || size < 2)
+		return;
+
 	while (start < size - 1)
 	{
 		low = array[start];
@@ -27,10 +30,13 @@ void selection_sort(int *array, size_t size)
 			}
 			i++;
 		}
-		temp = array[start];
-		array[start] = array[low_idx];
-		array[low_idx] = temp;
+		if (start != low_idx)
+		{
+			temp = array[start];
+			array[start] = array[low_idx];
+			array[low_idx] = temp;
+			print_array(array, size);
+		}
 		start++;
-		print_array(array, size);
 	}
 }
