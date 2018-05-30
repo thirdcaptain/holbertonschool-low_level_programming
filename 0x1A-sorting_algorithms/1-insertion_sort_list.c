@@ -49,7 +49,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *cursor_f, *cursor_b, *temp;
 	int value = 0, count = 0;
 
-	if (*list == NULL)
+	if (list == NULL)
 		return;
 
 	cursor_f = *list;
