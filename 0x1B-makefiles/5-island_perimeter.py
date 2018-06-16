@@ -8,7 +8,7 @@ def island_perimeter(grid):
     for row in range(len(grid)):
         # print(row)  # 0, 1, 2, 3
         for column in range(len(grid[row])):
-            #print(grid[row][column]) #actual values
+            # print(grid[row][column]) #actual values
             if grid[row][column] == 1:
                 """count top perimeter"""
                 if row == 0:
