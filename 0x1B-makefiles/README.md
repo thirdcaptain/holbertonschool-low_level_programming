@@ -45,5 +45,5 @@ OBJ: the .o files
 NAME: the name of the executable
 CFLAGS: your favorite compiler flags: -Wall -Werror -Wextra -pedantic
 
-### 5-Makefile
+### 5-island_perimeter.py
 A function def island_perimeter(grid): that returns the perimeter of the island described in grid
