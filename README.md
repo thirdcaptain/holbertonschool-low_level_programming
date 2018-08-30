@@ -1,5 +1,12 @@
-# holbertonschool-low_level_programming
+# Holberton School - Low Level Programming
 
-20180118
-0x00-hello_world
-
+Projects related to:
+ - C Programming
+   - If/Else conditionals
+   - Loops/Nested Loops
+   - Functions
+   - Pointers
+   - Memory Allocation
+   - Linked-Lists/Data Structures
+   - Sorting/Search Algorithms
+   
