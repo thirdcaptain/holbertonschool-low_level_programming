@@ -1,4 +1,4 @@
-0x12. C - More singly linked lists
+# 0x12. C - More singly linked lists
 
 20180305
 The purpose of this project is to further introduce the use of singly linked lists
