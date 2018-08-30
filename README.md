@@ -2,7 +2,7 @@
 
 Projects related to:
  - C Programming
-   - If/Else conditionals
+   - If/Else Conditionals
    - Loops/Nested Loops
    - Functions
    - Pointers
