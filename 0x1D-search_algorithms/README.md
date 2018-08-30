@@ -1,4 +1,4 @@
-0x1D. C - Search Algorithms
+#0x1D. C - Search Algorithms
 
 20180807 - The purpose of this project is to introduce space complexity in search algorithms
 
